@@ -55,9 +55,6 @@ public class UsuarioController {
                 } else {
                     UsuarioService.inserirUsuario(user);
                 }
-            } else {
-                UsuarioService.atualizarUsuario(index, user);
-                index = -1;
             }
         } catch (NumberFormatException e) {
             e.printStackTrace();
@@ -102,7 +99,6 @@ public class UsuarioController {
             } catch (NumberFormatException e) {
                 e.printStackTrace();
             }
-            //this.carregarlistaUsuario();
             this.limparCamposCadastro();
     }
     public void limparCamposCadastro() {
