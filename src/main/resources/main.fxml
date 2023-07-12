@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="516.0" prefWidth="295.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cadastro.usuario.controller.UsuarioController">
+   <children>
+      <TabPane prefHeight="516.0" prefWidth="295.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="entrar" text="Login">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="45.0" layoutY="111.0" text="Usuário *" />
+                        <TextField fx:id="nomeUsuario" layoutX="45.0" layoutY="128.0" prefHeight="25.0" prefWidth="206.0" />
+                        <Label layoutX="45.0" layoutY="163.0" text="Senha *" />
+                        <TextField fx:id="senha" layoutX="45.0" layoutY="183.0" prefHeight="25.0" prefWidth="205.0" />
+                        <Button fx:id="botaoEntrar" layoutX="122.0" layoutY="231.0" mnemonicParsing="false" onAction="#executarEntrar" text="Login" />
+                     </children>
+                  </AnchorPane>
+               </content>
+          </Tab>
+          <Tab text="Cadastro">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="cadatroUsuario" layoutX="84.0" layoutY="22.0" prefHeight="32.0" prefWidth="150.0" text="Cadastro do Usuário" textAlignment="CENTER" textFill="#4a130f">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="25.0" layoutY="54.0" text="Código *" />
+                        <TextField fx:id="idUsuario" layoutX="23.0" layoutY="71.0" prefHeight="25.0" prefWidth="75.0" />
+                        <Label layoutX="25.0" layoutY="107.0" text="Nome *" />
+                        <TextField fx:id="nome" layoutX="23.0" layoutY="129.0" prefHeight="25.0" prefWidth="250.0" />
+                        <Label layoutX="23.0" layoutY="164.0" text="CPF *" />
+                        <TextField fx:id="cpf" layoutX="23.0" layoutY="183.0" prefHeight="25.0" prefWidth="248.0" />
+                        <Label layoutX="24.0" layoutY="219.0" text="Endereço" />
+                        <TextField fx:id="endereco" layoutX="23.0" layoutY="241.0" prefHeight="89.0" prefWidth="248.0" />
+                        <Label layoutX="26.0" layoutY="345.0" text="Telefone" />
+                        <TextField fx:id="telefone" layoutX="23.0" layoutY="366.0" />
+                        <Button fx:id="salvar" layoutX="121.0" layoutY="403.0" mnemonicParsing="false" onAction="#executarSalvar" text="Salvar" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</VBox>
