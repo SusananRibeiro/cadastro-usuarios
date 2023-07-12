@@ -47,10 +47,10 @@ public class UsuarioController {
                 alertaObrig.setHeaderText("É obrigatório informar a senha!");
                 alertaObrig.show(); // precisa para mostrar a tela do alerta
             } else if (index < 0) {
-                if (UsuarioService.buscarUsuarioByDocumento(user.nomeUsuario)) {
+                if (UsuarioService.buscarUsuarioByUsuario(user.nomeUsuario)) {
                     Alert alert = new Alert(Alert.AlertType.ERROR);
                     alert.setTitle("Alerta");
-                    alert.setHeaderText("Usuário " + nomeUsuario.getText() + " já existe na base.");
+                    alert.setHeaderText("Usuário " + nomeUsuario.getText() + " já existe.");
                     alert.show(); // precisa para mostrar a tela do alerta
                 } else {
                     UsuarioService.inserirUsuario(user);

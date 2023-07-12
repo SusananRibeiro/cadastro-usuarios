@@ -23,7 +23,7 @@ public class UsuarioService {
     }
 
     // Validar o documento único
-    public static boolean buscarUsuarioByDocumento(String usuario) {
+    public static boolean buscarUsuarioByUsuario(String usuario) {
         try {
             Connection conn = conexao.getConexao();
             String selectSql = "SELECT id FROM usuarios WHERE usuario = '" + usuario + "'"; // precisa colocar entre aspas simples
